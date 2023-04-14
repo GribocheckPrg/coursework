@@ -20,6 +20,9 @@ namespace CourseWork
         public MainWindow()
         {
             InitializeComponent();
+
+            ProductsComboBox.Items.Add("Парагвай");
+            ProductsComboBox.Items.Insert(1, "Боливия");
         }
     }
 }
