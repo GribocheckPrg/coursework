@@ -5,3 +5,5 @@
 /obj
 /bin/Debug/net7.0-windows
 /.vs/CourseWork
+/.vs
+/CourseWork.csproj.user
