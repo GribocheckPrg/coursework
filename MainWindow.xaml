@@ -14,6 +14,23 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <ComboBox Grid.Row="1" x:Name="ProductsComboBox" Margin="5"/>
-        <Button Grid.Row="2" x:Name="FindButton" Width="400" Margin="5" Content="Find"/>
+        <Button Grid.Row="2" x:Name="FindButton" Width="400" Margin="5" Content="Find" Click="FindButton_Click"/>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.9*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.6*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Название товара"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Колчество"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="Номер Склада"/>
+            <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3">
+                <StackPanel x:Name="FoundItems" Grid.ColumnSpan="3"/>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
