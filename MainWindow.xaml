@@ -1,12 +1,36 @@
 ﻿<Window x:Class="CourseWork.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CourseWork"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:CourseWork"
+		mc:Ignorable="d"
+		Title="MainWindow" Height="900" Width="1600" Background="#00ffff">
+    <Grid Width="900" HorizontalAlignment="Center" Background="#FFFF00F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <ComboBox Grid.Row="1" x:Name="ProductsComboBox" Margin="5"/>
+        <Button Grid.Row="2" x:Name="FindButton" Width="400" Margin="5" Content="Find" Click="FindButton_Click"/>
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.9*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.6*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Название товара"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Колчество"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="Номер Склада"/>
+            <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3">
+                <StackPanel x:Name="FoundItems" Grid.ColumnSpan="3"/>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
